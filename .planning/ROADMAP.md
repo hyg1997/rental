@@ -29,12 +29,12 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Every page in the site shares the same Navbar and Footer rendered from siteSettings data in Sanity
   4. Site renders correctly on a 360px mobile screen (hamburger menu works) and on desktop
   5. A placeholder page deployed to production confirms the CI/CD pipeline is functional end-to-end
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 01-01: Project scaffolding — Next.js 15 App Router, TypeScript, Tailwind v4, shadcn/ui, Sanity client setup, hosting decision confirmed
-- [ ] 01-02: Sanity schemas — all content types defined and typed (equipos, posts, banners, siteSettings, reclamos, pages)
-- [ ] 01-03: Base layout — Navbar, Footer, WhatsApp button shell, responsive design system, dark theme with red/yellow accents
+- [ ] 01-01-PLAN.md — Project scaffolding: Next.js 15, Tailwind v4 theme, shadcn/ui, Sanity client, Playwright test infra
+- [ ] 01-02-PLAN.md — Sanity schemas: all 6 content types + Studio at /studio + siteSettings query
+- [ ] 01-03-PLAN.md — Base layout: Navbar (hamburger), Footer (3-col), WhatsApp button, responsive at 360px
 
 ### Phase 2: Equipment Catalog
 **Goal**: Visitors can browse all equipment, filter by type, search by name or brand, view full specs, and initiate a quote request — the site's core product showcase is fully functional
