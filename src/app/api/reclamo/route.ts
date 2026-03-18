@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
 
     // Send email notification (non-blocking — don't fail the response if email fails)
     await resend.emails.send({
-      from: 'onboarding@resend.dev', // TODO: Replace with verified domain
+      from: process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev',
       to: ['contacto@testingcalibrations.com.pe'], // TODO: Replace with real email
       subject: `Nuevo reclamo de ${nombreConsumidor}`,
       html: `<p>Reclamo registrado en Sanity con ID: ${doc._id}</p>

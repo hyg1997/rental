@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev', // TODO: Replace with verified domain before production
+      from: process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev',
       to: ['contacto@testingcalibrations.com.pe'], // TODO: Replace with real email
       subject: `Nueva consulta de ${nombre}`,
       html: `<p><strong>Nombre:</strong> ${nombre}</p>
