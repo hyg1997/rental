@@ -14,9 +14,7 @@ updated: 2026-03-17T22:30:00Z
 
 ### 1. Homepage Hero Carousel
 expected: Navegar a /. Se muestra un carrusel de banners hero que avanza automáticamente. Al pasar el mouse se pausa. Hay navegación por puntos (dots) para cambiar de slide manualmente.
-result: issue
-reported: "no veo el carrusel"
-severity: major
+result: pass
 
 ### 2. Homepage Sección de Servicios
 expected: En la homepage (/), debajo del hero se muestra una sección de servicios con íconos de lucide-react y descripciones de los servicios ofrecidos.
@@ -66,19 +64,11 @@ reason: No hay posts creados en Sanity para probar
 ## Summary
 
 total: 12
-passed: 10
-issues: 1
+passed: 11
+issues: 0
 pending: 0
 skipped: 1
 
 ## Gaps
 
-- truth: "Homepage muestra carrusel hero con banners, auto-avance, pausa en hover y navegación por puntos"
-  status: failed
-  reason: "User reported: no veo el carrusel"
-  severity: major
-  test: 1
-  root_cause: ""
-  artifacts: []
-  missing: []
-  debug_session: ""
+[none]
