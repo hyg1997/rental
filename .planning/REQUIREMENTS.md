@@ -48,9 +48,9 @@
 
 ### Diseño y UX
 
-- [ ] **UX-01**: Sitio es responsive y mobile-first
+- [x] **UX-01**: Sitio es responsive y mobile-first
 - [x] **UX-02**: Diseño moderno inspirado en rdrental.com.pe (colores oscuros, acentos rojos/amarillos, tipografía bold)
-- [ ] **UX-03**: Navegación principal con menú hamburguesa en mobile
+- [x] **UX-03**: Navegación principal con menú hamburguesa en mobile
 
 ### SEO
 
@@ -97,9 +97,9 @@
 | CMS-01 | Phase 1 | Complete |
 | CMS-02 | Phase 1 | Complete |
 | CMS-03 | Phase 1 | Complete |
-| UX-01 | Phase 1 | Pending |
+| UX-01 | Phase 1 | Complete |
 | UX-02 | Phase 1 | Complete |
-| UX-03 | Phase 1 | Pending |
+| UX-03 | Phase 1 | Complete |
 | EQUIP-01 | Phase 2 | Pending |
 | EQUIP-02 | Phase 2 | Pending |
 | EQUIP-03 | Phase 2 | Pending |

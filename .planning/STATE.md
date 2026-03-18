@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-foundation 01-02-PLAN.md
-last_updated: "2026-03-18T00:20:11.570Z"
-last_activity: 2026-03-18 — Plan 01-01 complete, Next.js 15 scaffold with Tailwind v4 + shadcn/ui + Sanity client + Playwright
+stopped_at: Completed 01-foundation 01-03-PLAN.md
+last_updated: "2026-03-18T00:58:29.546Z"
+last_activity: 2026-03-18 — Plan 01-02 complete, all 6 Sanity schemas + Studio at /studio + siteSettings GROQ query
 progress:
   total_phases: 4
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
-  completed_plans: 2
-  percent: 8
+  completed_plans: 3
+  percent: 67
 ---
 
 # Project State
@@ -50,6 +50,7 @@ Progress: [███████░░░] 67%
 - Trend: accelerating
 
 *Updated after each plan completion*
+| Phase 01-foundation P03 | 20 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -66,6 +67,9 @@ Recent decisions affecting current work:
 - [01-01]: @sanity/client used directly for data fetching (not next-sanity main entry) — avoids issue #1899 transitive server actions import.
 - [Phase 01-02]: __experimental_actions singleton: Object.assign post-defineType is the TypeScript-safe pattern for Sanity v3 singleton schemas
 - [Phase 01-02]: GROQ defineQuery from groq package confirmed pattern — not next-sanity main entry (issue #1899 avoidance)
+- [Phase 01-foundation]: Navbar marked 'use client' for shadcn Sheet interactivity; Footer and WhatsAppButton remain server components to minimize client bundle
+- [Phase 01-foundation]: siteSettings fetched once in (site)/layout.tsx server component and passed as props — avoids per-component waterfall fetches
+- [Phase 01-foundation]: Fallback default navLinks array in layout ensures nav renders without a Sanity siteSettings document
 
 ### Pending Todos
 
@@ -79,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T00:20:11.568Z
-Stopped at: Completed 01-foundation 01-02-PLAN.md
+Last session: 2026-03-18T00:58:29.544Z
+Stopped at: Completed 01-foundation 01-03-PLAN.md
 Resume file: None
