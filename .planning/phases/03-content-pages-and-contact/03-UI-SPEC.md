@@ -1,7 +1,8 @@
 ---
 phase: 3
 slug: content-pages-and-contact
-status: draft
+status: approved
+reviewed_at: 2026-03-17
 shadcn_initialized: true
 preset: base-nova
 created: 2026-03-17
