@@ -45,11 +45,12 @@ Plans:
   2. Visitor can search equipment by name or brand and see results update in real time
   3. Visitor can open any equipment detail page and see its specifications, images, and availability status
   4. Visitor can request a quote from an equipment detail page — either via a contact form pre-filled with the equipment name or via WhatsApp with the equipment name in the pre-filled message
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Equipment list page — /equipos with category filter (client-side), Sanity GROQ query, image optimization via @sanity/image-url, placeholder equipment content
-- [ ] 02-02: Equipment detail page — /equipos/[slug] with generateStaticParams, specs layout, quote CTA (form modal or WhatsApp deep link with equipment context)
+- [ ] 02-01-PLAN.md — Shared infrastructure: GROQ queries, image-url helper, next.config remotePatterns, shadcn Input/Badge, Playwright smoke tests
+- [ ] 02-02-PLAN.md — Equipment list page: /equipos with filter tabs (Todos/Calibracion/En Venta), search by name/brand, responsive card grid
+- [ ] 02-03-PLAN.md — Equipment detail page: /equipos/[slug] with generateStaticParams, specs (Portable Text), image, WhatsApp quote CTA
 
 ### Phase 3: Content Pages and Contact
 **Goal**: The full site is browsable — visitors can understand who the company is, read the blog, contact the company through any channel, and file a formal complaint; the homepage drives all of these conversions
@@ -92,6 +93,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-18 |
-| 2. Equipment Catalog | 0/2 | Not started | - |
+| 2. Equipment Catalog | 0/3 | Not started | - |
 | 3. Content Pages and Contact | 0/4 | Not started | - |
 | 4. SEO and Launch | 0/2 | Not started | - |
