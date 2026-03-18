@@ -62,9 +62,10 @@ Plans:
   3. Visitor can submit the contact/quote form from /contacto and the company receives an email notification; the WhatsApp floating button is present on every page and opens with a pre-filled message
   4. Visitor can navigate to the libro de reclamaciones, fill out the regulated form, submit it, and the company receives an email notification; the reclamo is saved in Sanity
   5. Visitor can browse the blog list at /blog, click an article, and read the full content rendered from Portable Text with Sanity-managed categories and author
-**Plans**: 4 plans
+**Plans**: 5 plans
 
 Plans:
+- [ ] 03-00-PLAN.md — Wave 0: Playwright test stubs for all 16 phase 3 requirements
 - [ ] 03-01-PLAN.md — Homepage: hero banner carousel, services section, values section, featured equipment grid, animated metrics, reclamaciones CTA
 - [ ] 03-02-PLAN.md — Institutional pages: /nosotros page with company history and values, Footer enhanced with reclamaciones link
 - [ ] 03-03-PLAN.md — Contact and complaints: /contacto page with form + map, /libro-de-reclamaciones with regulated form, Resend email API routes, Sanity reclamo persistence
