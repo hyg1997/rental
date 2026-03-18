@@ -80,11 +80,11 @@ Plans:
   2. Sharing any page URL on WhatsApp or social media shows the correct Open Graph image, title, and description
   3. A valid sitemap.xml is accessible at the production domain root and includes all public routes
   4. The contact form successfully delivers an email from the production domain (not localhost), Sanity Studio login works at /studio on the production URL, and the WhatsApp button opens correctly on a real mobile device
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: SEO integration — generateMetadata per page (title, description from Sanity), Open Graph tags, sitemap.ts or next-sitemap, robots.txt
-- [ ] 04-02: Production launch — Sanity CORS configured for production domain, environment variables verified on server, contact form email delivery tested from production, full site smoke test
+- [ ] 04-01-PLAN.md — SEO infrastructure: Sanity SEO schema fields, GROQ queries, sitemap.ts, robots.ts, root layout metadataBase, Playwright test stubs
+- [ ] 04-02-PLAN.md — Page metadata wiring: generateMetadata on all 7 public pages with title, description, and Open Graph tags from Sanity
 
 ## Progress
 
