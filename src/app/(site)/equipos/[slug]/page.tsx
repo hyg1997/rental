@@ -1,5 +1,7 @@
+import type { Metadata } from 'next'
 import { client } from '@/sanity/client'
 import { EQUIPO_BY_SLUG_QUERY, EQUIPOS_SLUGS_QUERY } from '@/sanity/queries/equipos'
+import { EQUIPO_SEO_BY_SLUG_QUERY } from '@/sanity/queries/seo'
 import { SITE_SETTINGS_QUERY } from '@/sanity/queries/site-settings'
 import { urlFor } from '@/lib/image-url'
 import { notFound } from 'next/navigation'
@@ -8,6 +10,33 @@ import Link from 'next/link'
 import { PortableText } from '@portabletext/react'
 import { Badge } from '@/components/ui/badge'
 import { MessageCircle, Package } from 'lucide-react'
+
+type Props = { params: Promise<{ slug: string }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  const equipo = await client.fetch(EQUIPO_SEO_BY_SLUG_QUERY, { slug }).catch(() => null)
+
+  if (!equipo) return { title: 'Equipo no encontrado' }
+
+  const title = equipo.seoTitle ?? equipo.nombre
+  const description = equipo.seoDescription ?? equipo.descripcion
+    ?? `${equipo.nombre}${equipo.marca ? ` - ${equipo.marca}` : ''} | Testing Calibrations S.A.C.`
+
+  const imageUrl = equipo.imagen
+    ? urlFor(equipo.imagen).width(1200).height(630).url()
+    : undefined
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630 }] : [],
+    },
+  }
+}
 
 export async function generateStaticParams() {
   const slugs = await client.fetch(EQUIPOS_SLUGS_QUERY).catch(() => [])
