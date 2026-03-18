@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-equipment-catalog-03-PLAN.md
-last_updated: "2026-03-18T02:20:13.530Z"
+stopped_at: Completed 02-equipment-catalog-02-PLAN.md
+last_updated: "2026-03-18T02:21:01.020Z"
 last_activity: 2026-03-18 — Plan 01-02 complete, all 6 Sanity schemas + Studio at /studio + siteSettings GROQ query
 progress:
   total_phases: 4
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
   percent: 67
 ---
 
@@ -53,6 +53,7 @@ Progress: [███████░░░] 67%
 | Phase 01-foundation P03 | 20 | 2 tasks | 7 files |
 | Phase 02-equipment-catalog P01 | 8 | 2 tasks | 6 files |
 | Phase 02-equipment-catalog P03 | 1 | 1 tasks | 1 files |
+| Phase 02-equipment-catalog P02 | 2 | 2 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -75,6 +76,7 @@ Recent decisions affecting current work:
 - [Phase 02-equipment-catalog]: SanityImageSource imported from @sanity/image-url main entry (not sub-path) — v2.0.3 removed the lib/types/types sub-path
 - [Phase 02-equipment-catalog]: Next.js 15 params treated as Promise — await params before destructuring on detail page
 - [Phase 02-equipment-catalog]: WhatsApp CTA uses encodeURIComponent on message to ensure URL-safe deep link with equipment name
+- [Phase 02-equipment-catalog]: imagenPrincipal typed as unknown in EquipoListItem, cast to SanityImageSource at EquipmentCard call site — keeps grid interface generic while maintaining TypeScript correctness
 
 ### Pending Todos
 
@@ -88,6 +90,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T02:20:13.527Z
-Stopped at: Completed 02-equipment-catalog-03-PLAN.md
+Last session: 2026-03-18T02:21:01.017Z
+Stopped at: Completed 02-equipment-catalog-02-PLAN.md
 Resume file: None
