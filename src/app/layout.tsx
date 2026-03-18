@@ -9,8 +9,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Testing Calibrations S.A.C.",
-  description: "Calibración de analizadores de gases vehiculares",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://testingcalibrations.com.pe'),
+  title: {
+    default: 'Testing Calibrations S.A.C.',
+    template: '%s | Testing Calibrations S.A.C.',
+  },
+  description: 'Servicios de calibracion y venta de equipos de medicion en Peru.',
 };
 
 export default function RootLayout({
