@@ -13,7 +13,7 @@ Four phases build the site in strict dependency order. Phase 1 establishes the t
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Next.js project, Sanity schemas, base layout, and CI/CD pipeline working end-to-end (completed 2026-03-18)
-- [ ] **Phase 2: Equipment Catalog** - Filterable catalog with detail pages and quote CTAs fully working
+- [x] **Phase 2: Equipment Catalog** - Filterable catalog with detail pages and quote CTAs fully working (completed 2026-03-18)
 - [ ] **Phase 3: Content Pages and Contact** - Homepage, About Us, blog, contact form, WhatsApp, and libro de reclamaciones
 - [ ] **Phase 4: SEO and Launch** - Meta tags, Open Graph, sitemap, and site live on production domain
 
@@ -93,6 +93,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete   | 2026-03-18 |
-| 2. Equipment Catalog | 0/3 | Not started | - |
+| 2. Equipment Catalog | 3/3 | Complete   | 2026-03-18 |
 | 3. Content Pages and Contact | 0/4 | Not started | - |
 | 4. SEO and Launch | 0/2 | Not started | - |

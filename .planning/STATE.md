@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-equipment-catalog-01-PLAN.md
-last_updated: "2026-03-18T02:17:03.411Z"
+stopped_at: Completed 02-equipment-catalog-03-PLAN.md
+last_updated: "2026-03-18T02:20:13.530Z"
 last_activity: 2026-03-18 — Plan 01-02 complete, all 6 Sanity schemas + Studio at /studio + siteSettings GROQ query
 progress:
   total_phases: 4
   completed_phases: 1
   total_plans: 6
-  completed_plans: 4
+  completed_plans: 5
   percent: 67
 ---
 
@@ -52,6 +52,7 @@ Progress: [███████░░░] 67%
 *Updated after each plan completion*
 | Phase 01-foundation P03 | 20 | 2 tasks | 7 files |
 | Phase 02-equipment-catalog P01 | 8 | 2 tasks | 6 files |
+| Phase 02-equipment-catalog P03 | 1 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -72,6 +73,8 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: siteSettings fetched once in (site)/layout.tsx server component and passed as props — avoids per-component waterfall fetches
 - [Phase 01-foundation]: Fallback default navLinks array in layout ensures nav renders without a Sanity siteSettings document
 - [Phase 02-equipment-catalog]: SanityImageSource imported from @sanity/image-url main entry (not sub-path) — v2.0.3 removed the lib/types/types sub-path
+- [Phase 02-equipment-catalog]: Next.js 15 params treated as Promise — await params before destructuring on detail page
+- [Phase 02-equipment-catalog]: WhatsApp CTA uses encodeURIComponent on message to ensure URL-safe deep link with equipment name
 
 ### Pending Todos
 
@@ -85,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T02:17:03.408Z
-Stopped at: Completed 02-equipment-catalog-01-PLAN.md
+Last session: 2026-03-18T02:20:13.527Z
+Stopped at: Completed 02-equipment-catalog-03-PLAN.md
 Resume file: None
