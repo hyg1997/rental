@@ -11,6 +11,7 @@ const siteSettingsBase = defineType({
     { name: 'nosotros', title: 'Pagina Nosotros' },
     { name: 'contacto', title: 'Contacto y Redes' },
     { name: 'navegacion', title: 'Menu y Footer' },
+    { name: 'seo', title: 'SEO por Defecto' },
   ],
   fields: [
     // General
@@ -294,6 +295,30 @@ const siteSettingsBase = defineType({
       type: 'string',
       group: 'navegacion',
       description: 'Texto de copyright. Ejemplo: "2025 Testing Calibrations S.A.C. Todos los derechos reservados."',
+    }),
+
+    // SEO Defaults
+    defineField({
+      name: 'defaultSeoTitle',
+      title: 'Titulo SEO por Defecto',
+      type: 'string',
+      group: 'seo',
+      description: 'Titulo que aparece en Google cuando una pagina no tiene titulo propio.',
+    }),
+    defineField({
+      name: 'defaultSeoDescription',
+      title: 'Descripcion SEO por Defecto',
+      type: 'text',
+      rows: 2,
+      group: 'seo',
+      description: 'Descripcion que aparece en Google cuando una pagina no tiene descripcion propia.',
+    }),
+    defineField({
+      name: 'defaultOgImage',
+      title: 'Imagen OG por Defecto',
+      type: 'image',
+      group: 'seo',
+      description: 'Imagen de reserva cuando la pagina no tiene imagen propia. 1200x630px.',
     }),
   ],
 })
