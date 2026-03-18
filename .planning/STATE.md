@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 04-03-PLAN.md (awaiting human-verify checkpoint Task 2)
-last_updated: "2026-03-18T07:45:23.812Z"
+stopped_at: Completed 04-02-PLAN.md
+last_updated: "2026-03-18T07:52:33.695Z"
 last_activity: 2026-03-18 — All Phase 03 plans executed (homepage, nosotros, contact, blog)
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 17
-  completed_plans: 16
+  completed_plans: 17
   percent: 81
 ---
 
@@ -60,6 +60,7 @@ Progress: [████████░░] 81%
 | Phase 05-cms PP02 | 8 | 2 tasks | 5 files |
 | Phase 04-seo-and-launch P01 | 8 | 2 tasks | 8 files |
 | Phase 04-seo-and-launch PP03 | 1 | 1 tasks | 2 files |
+| Phase 04-seo-and-launch PP02 | 15 | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,7 @@ Recent decisions affecting current work:
 - [Phase 04-seo-and-launch]: SEO fields use field groups in Sanity Studio — editors see Contenido tab by default, SEO tab only when needed
 - [Phase 04-seo-and-launch]: metadataBase reads NEXT_PUBLIC_SITE_URL env var with testingcalibrations.com.pe as hardcoded fallback
 - [Phase 04-seo-and-launch]: RESEND_FROM_EMAIL env var with onboarding@resend.dev fallback — allows verified domain sender in production while keeping Resend sandbox working in development
+- [Phase 04-seo-and-launch]: generateMetadata-only pattern: no metadata constant, async function on all pages — static pages use hardcoded Spanish, dynamic pages fetch from Sanity
 
 ### Roadmap Evolution
 
@@ -113,6 +115,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T07:45:23.809Z
-Stopped at: Completed 04-03-PLAN.md (awaiting human-verify checkpoint Task 2)
+Last session: 2026-03-18T07:52:33.693Z
+Stopped at: Completed 04-02-PLAN.md
 Resume file: None
