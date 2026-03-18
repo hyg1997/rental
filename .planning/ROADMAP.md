@@ -80,11 +80,12 @@ Plans:
   2. Sharing any page URL on WhatsApp or social media shows the correct Open Graph image, title, and description
   3. A valid sitemap.xml is accessible at the production domain root and includes all public routes
   4. The contact form successfully delivers an email from the production domain (not localhost), Sanity Studio login works at /studio on the production URL, and the WhatsApp button opens correctly on a real mobile device
-**Plans**: 2 plans
+**Plans**: 3 plans
 
 Plans:
 - [ ] 04-01-PLAN.md — SEO infrastructure: Sanity SEO schema fields, GROQ queries, sitemap.ts, robots.ts, root layout metadataBase, Playwright test stubs
 - [ ] 04-02-PLAN.md — Page metadata wiring: generateMetadata on all 7 public pages with title, description, and Open Graph tags from Sanity
+- [ ] 04-03-PLAN.md — Production hardening: Resend from address env var, CORS verification, env audit, manual production checklist
 
 ## Progress
 
@@ -96,10 +97,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | Complete   | 2026-03-18 |
 | 2. Equipment Catalog | 3/3 | Complete   | 2026-03-18 |
 | 3. Content Pages and Contact | 5/5 | Complete | 2026-03-18 |
-| 4. SEO and Launch | 0/2 | Not started | - |
+| 4. SEO and Launch | 0/3 | Not started | - |
 | 5. CMS completo y Studio en espanol | 3/3 | Complete | 2026-03-18 |
 
-### Phase 5: CMS completo y Studio en español para edición sin código
+### Phase 5: CMS completo y Studio en español para edicion sin codigo
 
 **Goal:** Todo el contenido actualmente hardcodeado (servicios, valores, metricas, nosotros) es editable desde Sanity Studio, y el Studio tiene UI en espanol con sidebar organizado y fieldGroups para editores no-tecnicos
 **Requirements**: CMS5-01, CMS5-02, CMS5-03, CMS5-04, CMS5-05
