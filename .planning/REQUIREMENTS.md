@@ -42,9 +42,9 @@
 
 ### CMS y Administración
 
-- [ ] **CMS-01**: Todo el contenido es administrable desde Sanity Studio (textos, imágenes, equipos, artículos, banners)
-- [ ] **CMS-02**: Sanity Studio accesible en ruta /studio del sitio
-- [ ] **CMS-03**: Schemas de Sanity cubren: equipos, artículos de blog, banners hero, páginas, configuración del sitio, reclamos
+- [x] **CMS-01**: Todo el contenido es administrable desde Sanity Studio (textos, imágenes, equipos, artículos, banners)
+- [x] **CMS-02**: Sanity Studio accesible en ruta /studio del sitio
+- [x] **CMS-03**: Schemas de Sanity cubren: equipos, artículos de blog, banners hero, páginas, configuración del sitio, reclamos
 
 ### Diseño y UX
 
@@ -94,9 +94,9 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CMS-01 | Phase 1 | Pending |
-| CMS-02 | Phase 1 | Pending |
-| CMS-03 | Phase 1 | Pending |
+| CMS-01 | Phase 1 | Complete |
+| CMS-02 | Phase 1 | Complete |
+| CMS-03 | Phase 1 | Complete |
 | UX-01 | Phase 1 | Pending |
 | UX-02 | Phase 1 | Complete |
 | UX-03 | Phase 1 | Pending |

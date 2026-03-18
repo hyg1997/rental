@@ -2,15 +2,15 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: in-progress
-stopped_at: Completed 01-foundation 01-01-PLAN.md
-last_updated: "2026-03-18T00:12:06Z"
+status: executing
+stopped_at: Completed 01-foundation 01-02-PLAN.md
+last_updated: "2026-03-18T00:20:11.570Z"
 last_activity: 2026-03-18 — Plan 01-01 complete, Next.js 15 scaffold with Tailwind v4 + shadcn/ui + Sanity client + Playwright
 progress:
   total_phases: 4
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
   percent: 8
 ---
 
@@ -26,28 +26,28 @@ See: .planning/PROJECT.md (updated 2026-03-17)
 ## Current Position
 
 Phase: 1 of 4 (Foundation)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress — executing plans
-Last activity: 2026-03-18 — Plan 01-01 complete, Next.js 15 scaffold with Tailwind v4 + shadcn/ui + Sanity client + Playwright
+Last activity: 2026-03-18 — Plan 01-02 complete, all 6 Sanity schemas + Studio at /studio + siteSettings GROQ query
 
-Progress: [█░░░░░░░░░] 8%
+Progress: [███████░░░] 67%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 11 min
-- Total execution time: 11 min
+- Total plans completed: 2
+- Average duration: 6.5 min
+- Total execution time: 13 min
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| 01-foundation | 1 | 11min | 11min |
+| 01-foundation | 2 | 13min | 6.5min |
 
 **Recent Trend:**
-- Last 5 plans: 11min
-- Trend: —
+- Last 5 plans: 11min, 2min
+- Trend: accelerating
 
 *Updated after each plan completion*
 
@@ -64,6 +64,8 @@ Recent decisions affecting current work:
 - [01-01]: VPS architecture chosen — proceeding with full Next.js (next start), not static export. Enables embedded Studio, API routes, Server Actions.
 - [01-01]: OKLCH color palette defined as CSS-first @theme inline in globals.css — no tailwind.config.js. Brand tokens: brand-bg, brand-surface, brand-red, brand-yellow, brand-text.
 - [01-01]: @sanity/client used directly for data fetching (not next-sanity main entry) — avoids issue #1899 transitive server actions import.
+- [Phase 01-02]: __experimental_actions singleton: Object.assign post-defineType is the TypeScript-safe pattern for Sanity v3 singleton schemas
+- [Phase 01-02]: GROQ defineQuery from groq package confirmed pattern — not next-sanity main entry (issue #1899 avoidance)
 
 ### Pending Todos
 
@@ -72,11 +74,11 @@ None yet.
 ### Blockers/Concerns
 
 - **Hosting plan unknown:** Confirm whether client has Hostinger shared or VPS. Proceeding with VPS (full Next.js) — if changed to shared hosting, architecture must be re-evaluated before deployment.
-- **Sanity project ID not configured:** Update `.env.local` with real NEXT_PUBLIC_SANITY_PROJECT_ID before Plan 02 (Studio embedding).
+- **Sanity project ID not configured:** Update `.env.local` with real NEXT_PUBLIC_SANITY_PROJECT_ID to connect Studio to a live Sanity project (schemas defined, Studio route ready).
 - **Image assets not ready:** Client has no digital photos yet; Phase 2 must use placeholder images and not block on this.
 
 ## Session Continuity
 
-Last session: 2026-03-18T00:12:06Z
-Stopped at: Completed 01-foundation 01-01-PLAN.md
-Resume file: .planning/phases/01-foundation/01-02-PLAN.md
+Last session: 2026-03-18T00:20:11.568Z
+Stopped at: Completed 01-foundation 01-02-PLAN.md
+Resume file: None
