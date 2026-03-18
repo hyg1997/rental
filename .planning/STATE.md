@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 02-equipment-catalog-02-PLAN.md
-last_updated: "2026-03-18T02:28:45.071Z"
+stopped_at: Completed 03-00-PLAN.md (Wave 0 test stubs)
+last_updated: "2026-03-18T03:07:30.548Z"
 last_activity: 2026-03-18 — Plan 01-02 complete, all 6 Sanity schemas + Studio at /studio + siteSettings GROQ query
 progress:
   total_phases: 4
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 11
+  completed_plans: 7
   percent: 67
 ---
 
@@ -54,6 +54,7 @@ Progress: [███████░░░] 67%
 | Phase 02-equipment-catalog P01 | 8 | 2 tasks | 6 files |
 | Phase 02-equipment-catalog P03 | 1 | 1 tasks | 1 files |
 | Phase 02-equipment-catalog P02 | 2 | 2 tasks | 3 files |
+| Phase 03-content-pages-and-contact P00 | 3 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,8 @@ Recent decisions affecting current work:
 - [Phase 02-equipment-catalog]: Next.js 15 params treated as Promise — await params before destructuring on detail page
 - [Phase 02-equipment-catalog]: WhatsApp CTA uses encodeURIComponent on message to ensure URL-safe deep link with equipment name
 - [Phase 02-equipment-catalog]: imagenPrincipal typed as unknown in EquipoListItem, cast to SanityImageSource at EquipmentCard call site — keeps grid interface generic while maintaining TypeScript correctness
+- [Phase 03-content-pages-and-contact]: Test names match VALIDATION.md grep patterns exactly for per-task verification commands
+- [Phase 03-content-pages-and-contact]: Wave 0 conditional assertions: isVisible() check before clicking dynamic links handles empty Sanity datasets without flakiness
 
 ### Pending Todos
 
@@ -90,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T02:21:01.017Z
-Stopped at: Completed 02-equipment-catalog-02-PLAN.md
+Last session: 2026-03-18T03:07:30.544Z
+Stopped at: Completed 03-00-PLAN.md (Wave 0 test stubs)
 Resume file: None

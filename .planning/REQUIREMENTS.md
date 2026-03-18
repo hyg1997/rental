@@ -7,12 +7,12 @@
 
 ### Homepage
 
-- [ ] **HOME-01**: Usuario ve hero banner rotativo con imágenes, texto y CTAs administrables desde Sanity
-- [ ] **HOME-02**: Usuario ve sección de servicios que describe qué hace la empresa
-- [ ] **HOME-03**: Usuario ve sección "Por qué elegirnos" con valores diferenciadores e íconos
-- [ ] **HOME-04**: Usuario ve grid de equipos destacados con link al catálogo
-- [ ] **HOME-05**: Usuario ve métricas de experiencia con contadores animados (clientes, proyectos, años, etc.)
-- [ ] **HOME-06**: Usuario ve sección/enlace al libro de reclamaciones
+- [x] **HOME-01**: Usuario ve hero banner rotativo con imágenes, texto y CTAs administrables desde Sanity
+- [x] **HOME-02**: Usuario ve sección de servicios que describe qué hace la empresa
+- [x] **HOME-03**: Usuario ve sección "Por qué elegirnos" con valores diferenciadores e íconos
+- [x] **HOME-04**: Usuario ve grid de equipos destacados con link al catálogo
+- [x] **HOME-05**: Usuario ve métricas de experiencia con contadores animados (clientes, proyectos, años, etc.)
+- [x] **HOME-06**: Usuario ve sección/enlace al libro de reclamaciones
 
 ### Catálogo de Equipos
 
@@ -23,22 +23,22 @@
 
 ### Contacto y Cotización
 
-- [ ] **CONT-01**: Usuario puede enviar formulario de contacto/cotización que notifica por email
-- [ ] **CONT-02**: Usuario puede abrir WhatsApp con mensaje predefinido desde botón flotante en toda la web
-- [ ] **CONT-03**: Página de contacto muestra ubicación, teléfono, email y mapa
-- [ ] **CONT-04**: Usuario puede enviar reclamo a través del libro de reclamaciones (formulario según normativa peruana)
-- [ ] **CONT-05**: Reclamos se guardan en Sanity y se envía email de notificación a la empresa
+- [x] **CONT-01**: Usuario puede enviar formulario de contacto/cotización que notifica por email
+- [x] **CONT-02**: Usuario puede abrir WhatsApp con mensaje predefinido desde botón flotante en toda la web
+- [x] **CONT-03**: Página de contacto muestra ubicación, teléfono, email y mapa
+- [x] **CONT-04**: Usuario puede enviar reclamo a través del libro de reclamaciones (formulario según normativa peruana)
+- [x] **CONT-05**: Reclamos se guardan en Sanity y se envía email de notificación a la empresa
 
 ### Blog
 
-- [ ] **BLOG-01**: Usuario puede ver listado de artículos del blog con imagen, título y extracto
-- [ ] **BLOG-02**: Usuario puede leer artículo completo con contenido rich text (Portable Text)
-- [ ] **BLOG-03**: Artículos son administrables desde Sanity con categorías y autor
+- [x] **BLOG-01**: Usuario puede ver listado de artículos del blog con imagen, título y extracto
+- [x] **BLOG-02**: Usuario puede leer artículo completo con contenido rich text (Portable Text)
+- [x] **BLOG-03**: Artículos son administrables desde Sanity con categorías y autor
 
 ### Páginas Institucionales
 
-- [ ] **INST-01**: Usuario puede ver página "Nosotros" con historia y valores de la empresa
-- [ ] **INST-02**: Footer muestra datos de contacto, dirección, redes sociales y links de navegación
+- [x] **INST-01**: Usuario puede ver página "Nosotros" con historia y valores de la empresa
+- [x] **INST-02**: Footer muestra datos de contacto, dirección, redes sociales y links de navegación
 
 ### CMS y Administración
 
@@ -104,22 +104,22 @@
 | EQUIP-02 | Phase 2 | Complete |
 | EQUIP-03 | Phase 2 | Complete |
 | EQUIP-04 | Phase 2 | Complete |
-| HOME-01 | Phase 3 | Pending |
-| HOME-02 | Phase 3 | Pending |
-| HOME-03 | Phase 3 | Pending |
-| HOME-04 | Phase 3 | Pending |
-| HOME-05 | Phase 3 | Pending |
-| HOME-06 | Phase 3 | Pending |
-| INST-01 | Phase 3 | Pending |
-| INST-02 | Phase 3 | Pending |
-| CONT-01 | Phase 3 | Pending |
-| CONT-02 | Phase 3 | Pending |
-| CONT-03 | Phase 3 | Pending |
-| CONT-04 | Phase 3 | Pending |
-| CONT-05 | Phase 3 | Pending |
-| BLOG-01 | Phase 3 | Pending |
-| BLOG-02 | Phase 3 | Pending |
-| BLOG-03 | Phase 3 | Pending |
+| HOME-01 | Phase 3 | Complete |
+| HOME-02 | Phase 3 | Complete |
+| HOME-03 | Phase 3 | Complete |
+| HOME-04 | Phase 3 | Complete |
+| HOME-05 | Phase 3 | Complete |
+| HOME-06 | Phase 3 | Complete |
+| INST-01 | Phase 3 | Complete |
+| INST-02 | Phase 3 | Complete |
+| CONT-01 | Phase 3 | Complete |
+| CONT-02 | Phase 3 | Complete |
+| CONT-03 | Phase 3 | Complete |
+| CONT-04 | Phase 3 | Complete |
+| CONT-05 | Phase 3 | Complete |
+| BLOG-01 | Phase 3 | Complete |
+| BLOG-02 | Phase 3 | Complete |
+| BLOG-03 | Phase 3 | Complete |
 | SEO-01 | Phase 4 | Pending |
 | SEO-02 | Phase 4 | Pending |
 | SEO-03 | Phase 4 | Pending |
