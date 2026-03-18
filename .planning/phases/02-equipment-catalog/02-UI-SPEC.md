@@ -5,6 +5,7 @@ status: draft
 shadcn_initialized: true
 preset: base-nova
 created: 2026-03-17
+updated: 2026-03-17
 ---
 
 # Phase 2 — UI Design Contract: Equipment Catalog
@@ -23,7 +24,7 @@ created: 2026-03-17
 | Icon library | lucide-react (already installed) |
 | Font | Inter — applied via `--font-heading` and `--font-body` in globals.css `@theme inline` |
 
-Source: `components.json` + `src/app/globals.css` — pre-populated from existing project state.
+Source: `components.json` confirmed present. `globals.css` `@theme inline` block confirms brand tokens. Codebase audit 2026-03-17.
 
 ---
 
@@ -42,10 +43,10 @@ Declared values (must be multiples of 4). Inherits the 8-point scale established
 | 3xl | 64px | Page-level top/bottom breathing room |
 
 Exceptions:
-- Touch targets on filter tab buttons: minimum 44px height (mobile tap target requirement)
+- Touch targets on filter tab buttons: minimum 44px height (mobile tap target requirement, matches Navbar `SheetTrigger` min-h-[44px] pattern from Phase 1)
 - Image placeholder rectangle on cards: aspect ratio 4:3, no fixed pixel height — responsive
 
-Source: Phase 1 Navbar/Footer component class patterns.
+Source: Phase 1 Navbar/Footer component class patterns confirmed by codebase audit.
 
 ---
 
@@ -60,9 +61,9 @@ Font: Inter (both heading and body) — declared in `globals.css` `--font-headin
 | Heading | 20px (text-xl) | 700 (bold) | 1.2 | Card equipment name, detail page section headings |
 | Display | 30px (text-3xl) | 700 (bold) | 1.2 | Page title "Catálogo de Equipos", detail page equipment name |
 
-Source: Phase 1 component class audit — Navbar uses `text-xl font-bold` for site name, `text-sm font-normal` for nav links, `text-sm font-medium` for CTA; Footer uses `text-lg font-bold` for column headings, `text-sm` for content.
-
 Weights declared: regular (400) + bold (700). No intermediate weights.
+
+Source: Phase 1 component audit — Navbar uses `text-xl font-bold` for site name, `text-sm font-normal` for nav links, `text-sm font-medium` for CTA.
 
 ---
 
@@ -75,22 +76,22 @@ All values are OKLCH CSS custom properties defined in `globals.css` `@theme inli
 | Dominant (60%) | `brand-bg` | oklch(0.12 0.01 260) — near-black dark navy | Page background (`bg-brand-bg`) |
 | Secondary (30%) | `brand-surface` | oklch(0.18 0.01 260) — dark navy | Navbar, Footer, equipment cards, filter bar background |
 | Accent (10%) | `brand-red` | oklch(0.55 0.22 25) — vivid red | Specific elements only — see accent reservation below |
-| Accent hover | `brand-yellow` | oklch(0.82 0.18 85) — amber yellow | CTA button hover state only (bg-brand-yellow with text-black) |
+| Accent hover | `brand-yellow` | oklch(0.82 0.18 85) — amber yellow | CTA button hover state only (`bg-brand-yellow` with `text-black`) |
 | Text primary | `brand-text` | oklch(0.96 0.01 260) — near-white | All body text, headings on dark background |
 | Text muted | `brand-text/60` | brand-text at 60% opacity | Secondary meta text (marca, modelo), muted labels |
 | Text subtle | `brand-text/10` | brand-text at 10% opacity | Dividers, card borders |
 | Destructive | shadcn `--destructive` | oklch(0.577 0.245 27.325) | No destructive actions in this phase — not used |
 
 Accent reserved for:
-1. Active filter tab button background
-2. "Solicitar Cotizacion por WhatsApp" CTA button background on detail page
-3. Hover state for nav links (`hover:text-brand-red`)
-4. Equipment estado badge for "disponible" status indicator
+1. Active filter tab button background (`bg-brand-red text-white`)
+2. "Solicitar Cotización por WhatsApp" CTA button background on detail page
+3. Hover state for nav links (`hover:text-brand-red`) — inherited from Phase 1 Navbar
+4. Equipment estado badge for "disponible" status indicator (`bg-green-600`)
 5. Search input focus ring
 
-brand-yellow is used ONLY as the hover background color on CTA buttons where brand-red is the default — not as a standalone color on any other element.
+`brand-yellow` is used ONLY as the hover background color on CTA buttons where `brand-red` is the default — not as a standalone color on any other element.
 
-Source: Phase 1 Navbar/Footer class audit + STATE.md decision "[01-01]: OKLCH color palette defined as CSS-first @theme inline in globals.css".
+Source: `globals.css` `@theme inline` confirmed exact OKLCH values. STATE.md decision "[01-01]: OKLCH color palette defined as CSS-first @theme inline in globals.css". Navbar source confirms `hover:text-brand-red` and `hover:bg-brand-yellow hover:text-black` pattern.
 
 ---
 
@@ -99,6 +100,7 @@ Source: Phase 1 Navbar/Footer class audit + STATE.md decision "[01-01]: OKLCH co
 Components needed for this phase, listed by page.
 
 ### Existing (Phase 1, no work needed)
+
 | Component | File | Used in Phase 2 |
 |-----------|------|-----------------|
 | Button | `src/components/ui/button.tsx` | Filter tab buttons, CTA fallback |
@@ -108,20 +110,22 @@ Components needed for this phase, listed by page.
 | WhatsAppButton | `src/components/whatsapp-button.tsx` | Inherited via layout |
 
 ### New (Phase 2, must be built)
+
 | Component | Path | Type | Purpose |
 |-----------|------|------|---------|
 | EquipmentGrid | `src/components/equipos/equipment-grid.tsx` | `'use client'` | Filter tabs + search input + responsive card grid |
 | EquipmentCard | `src/components/equipos/equipment-card.tsx` | Server-safe | Individual equipment card with image, name, marca, estado badge, link |
-| EquipmentImagePlaceholder | inline in EquipmentCard | Server-safe | Shown when `imagenes` array is empty; `bg-brand-surface` rectangle at aspect-ratio 4/3 |
+| EquipmentImagePlaceholder | inline in EquipmentCard | Server-safe | Shown when `imagenes` array is empty; `bg-brand-surface` rectangle at `aspect-ratio 4/3` |
 | QuoteCTA | inline in detail page | Server-safe | WhatsApp deep link button with brand-red background |
 
 ### shadcn Components to Install (from official registry only)
+
 | Component | Install Command | Used For |
 |-----------|-----------------|----------|
 | Input | `npx shadcn add input` | Search field on /equipos list page |
 | Badge | `npx shadcn add badge` | Equipment `estado` label on card and detail page |
 
-No third-party registries. `components.json` has `"registries": {}`.
+No third-party registries. `components.json` has `"registries": {}` — confirmed empty by codebase audit 2026-03-17.
 
 ---
 
@@ -130,72 +134,72 @@ No third-party registries. `components.json` has `"registries": {}`.
 ### /equipos — Equipment List Page
 
 ```
-┌─────────────────────────────────────────────────┐
-│ Navbar (brand-surface, full width)               │
-├─────────────────────────────────────────────────┤
-│ <section> max-w-7xl mx-auto px-4 py-12          │
-│   <h1> Catálogo de Equipos (text-3xl bold)      │
-│                                                  │
-│   [Filter bar: Todos | Calibración | Venta]     │
-│   [Search input: Buscar por nombre o marca...]  │
-│                                                  │
-│   <grid> grid-cols-1 sm:grid-cols-2             │
-│          lg:grid-cols-3 gap-6                   │
-│   ┌──────────┐ ┌──────────┐ ┌──────────┐       │
-│   │ Card     │ │ Card     │ │ Card     │       │
-│   └──────────┘ └──────────┘ └──────────┘       │
-│                                                  │
-│   [Empty state — shown when 0 results]          │
-├─────────────────────────────────────────────────┤
-│ Footer (brand-surface, full width)               │
-└─────────────────────────────────────────────────┘
++-----------------------------------------------------+
+| Navbar (brand-surface, full width)                  |
++-----------------------------------------------------+
+| <section> max-w-7xl mx-auto px-4 py-12             |
+|   <h1> Catalogo de Equipos (text-3xl bold)         |
+|                                                     |
+|   [Filter bar: Todos | Calibracion | Venta]        |
+|   [Search input: Buscar por nombre o marca...]     |
+|                                                     |
+|   <grid> grid-cols-1 sm:grid-cols-2                |
+|          lg:grid-cols-3 gap-6                      |
+|   +----------+ +----------+ +----------+           |
+|   | Card     | | Card     | | Card     |           |
+|   +----------+ +----------+ +----------+           |
+|                                                     |
+|   [Empty state -- shown when 0 results]            |
++-----------------------------------------------------+
+| Footer (brand-surface, full width)                  |
++-----------------------------------------------------+
 ```
 
-**Filter bar:** Three pill/tab buttons. Active = `bg-brand-red text-white`. Inactive = `bg-brand-surface text-brand-text hover:text-brand-red`. min-height 44px. No page reload on click (useState).
+**Filter bar:** Three pill/tab buttons. Active = `bg-brand-red text-white`. Inactive = `bg-brand-surface text-brand-text hover:text-brand-red`. `min-h-[44px]`. No page reload on click (`useState`). Rendered inside `EquipmentGrid` (`'use client'`).
 
-**Search input:** Full width on mobile, max-w-sm on desktop. Left-aligned below filter bar. Placeholder "Buscar por nombre o marca...". lucide-react `Search` icon inside left slot.
+**Search input:** Full width on mobile, `max-w-sm` on desktop. Left-aligned below filter bar with `mt-4` gap. Placeholder "Buscar por nombre o marca...". lucide-react `Search` icon inside left slot at 16px.
 
 **Equipment card anatomy:**
-- Image area: aspect-ratio 4/3, `object-cover`, `rounded-md`. Placeholder: `bg-brand-surface` with centered lucide `Package` icon in `text-brand-text/30`.
-- Card body: `bg-brand-surface rounded-lg overflow-hidden`
-- Equipment name: `text-xl font-bold text-brand-text` — truncate to 2 lines max
+- Image area: `aspect-ratio 4/3`, `object-cover`, `rounded-t-lg`. Placeholder: `bg-brand-surface` with centered lucide `Package` icon at 48px in `text-brand-text/30`
+- Card body: `bg-brand-surface rounded-b-lg p-4`
+- Equipment name: `text-xl font-bold text-brand-text` — truncate to 2 lines max (`line-clamp-2`)
 - Marca + Modelo: `text-sm text-brand-text/60` on one line
-- Estado badge: `disponible` = green-600 background; `no disponible` = `bg-brand-text/20 text-brand-text/60`; `en mantenimiento` = amber-600 background
-- Card bottom: full-width link `Ver detalles →` in `text-sm text-brand-red hover:text-brand-yellow`
+- Estado badge: `disponible` = `bg-green-600 text-white`; `no disponible` = `bg-brand-text/20 text-brand-text/60`; `en mantenimiento` = `bg-amber-600 text-white`
+- Card bottom link: `text-sm text-brand-red hover:text-brand-yellow` — "Ver detalles →"
 
 ### /equipos/[slug] — Equipment Detail Page
 
 ```
-┌─────────────────────────────────────────────────┐
-│ Navbar                                           │
-├─────────────────────────────────────────────────┤
-│ <section> max-w-5xl mx-auto px-4 py-12          │
-│   Breadcrumb: Catálogo / {nombre}               │
-│                                                  │
-│   Two-column on desktop (lg:grid-cols-2 gap-12) │
-│   Single-column stacked on mobile               │
-│                                                  │
-│   Left:  Image (primary, aspect 4/3)            │
-│   Right: nombre (text-3xl bold)                 │
-│          marca + modelo (text-sm muted)         │
-│          tipo badge + estado badge              │
-│          descripcion (text-base, 1.5 line-h)   │
-│          [Solicitar Cotización por WhatsApp]    │
-│                                                  │
-│   Below columns: Especificaciones               │
-│   heading text-xl bold + PortableText content   │
-├─────────────────────────────────────────────────┤
-│ Footer                                           │
-└─────────────────────────────────────────────────┘
++-----------------------------------------------------+
+| Navbar                                              |
++-----------------------------------------------------+
+| <section> max-w-5xl mx-auto px-4 py-12             |
+|   Breadcrumb: Catalogo / {nombre}                  |
+|                                                     |
+|   Two-column on desktop (lg:grid-cols-2 gap-12)    |
+|   Single-column stacked on mobile                  |
+|                                                     |
+|   Left:  Image (primary, aspect 4/3)               |
+|   Right: nombre (text-3xl bold)                    |
+|          marca + modelo (text-sm muted)            |
+|          tipo badge + estado badge                 |
+|          descripcion (text-base, 1.5 line-h)      |
+|          [Solicitar Cotizacion por WhatsApp]       |
+|                                                     |
+|   Below columns: Especificaciones                  |
+|   heading text-xl bold + PortableText content      |
++-----------------------------------------------------+
+| Footer                                              |
++-----------------------------------------------------+
 ```
 
-**Breadcrumb:** `text-sm text-brand-text/60`. Separator: `/`. Last item: `text-brand-text`.
+**Breadcrumb:** `text-sm text-brand-text/60`. Separator: `/`. Last item: `text-brand-text font-medium`.
 
-**Primary image:** aspect-ratio 4/3, `object-cover rounded-lg`. Placeholder: same `bg-brand-surface` rectangle.
+**Primary image:** `aspect-ratio 4/3`, `object-cover rounded-lg`. Placeholder: same `bg-brand-surface` rectangle with lucide `Package` icon.
 
-**WhatsApp CTA button:** `bg-brand-red hover:bg-brand-yellow text-white hover:text-black font-semibold py-3 px-6 rounded-md transition-colors`. Full width on mobile (`w-full`), auto width on desktop. Includes lucide `MessageCircle` icon on left at 20px.
+**WhatsApp CTA button:** `bg-brand-red hover:bg-brand-yellow text-white hover:text-black font-semibold py-3 px-6 rounded-md transition-colors duration-150`. Full width on mobile (`w-full`), auto width on desktop. Includes lucide `MessageCircle` icon on left at 20px.
 
-**Specifications section:** `prose prose-invert max-w-none` wrapping `<PortableText>`. Rendered below the two-column hero block, full width.
+**Specifications section:** `prose prose-invert max-w-none` wrapping `<PortableText>`. Rendered below the two-column hero block, full width, with `mt-12 pt-8 border-t border-brand-text/10`.
 
 ---
 
@@ -203,13 +207,14 @@ No third-party registries. `components.json` has `"registries": {}`.
 
 | Interaction | Behavior | Timing |
 |-------------|----------|--------|
-| Filter tab click | Updates `activeFilter` state, filters equipos array in memory via `useMemo`. No loading state (instant). | Synchronous |
-| Search input typing | Updates `searchQuery` state, re-runs `useMemo` filter. No debounce — in-memory filtering is instantaneous. | Synchronous |
-| Empty state appearance | Shown when filtered+searched array length === 0. Fade in with `animate-in fade-in-0` (tw-animate-css available). | Immediate |
-| Card hover | Card `shadow-md` appears, `scale-[1.01]` transform. Transition: `transition-transform duration-150`. | 150ms ease |
-| CTA button hover | Background transitions from `brand-red` to `brand-yellow`, text to `text-black`. Transition: `transition-colors duration-150`. | 150ms ease |
-| Image load | `next/image` with placeholder `blur` if Sanity provides it. Otherwise no visible shimmer — image appears when loaded. | Browser-native |
+| Filter tab click | Updates `activeFilter` state in `EquipmentGrid`, filters `equipos` array in memory via `useMemo`. No loading state (instant). | Synchronous |
+| Search input typing | Updates `searchQuery` state, re-runs `useMemo` filter on `nombre` and `marca` fields. No debounce — in-memory filtering is instantaneous for <100 items. | Synchronous |
+| Empty state appearance | Shown when filtered+searched array length === 0. `animate-in fade-in-0` via tw-animate-css (already imported). | Immediate |
+| Card hover | Card gains `shadow-md`, `scale-[1.01]` transform. `transition-transform duration-150`. | 150ms ease |
+| CTA button hover | Background transitions from `brand-red` to `brand-yellow`, text to `text-black`. `transition-colors duration-150`. | 150ms ease |
+| Image load | `next/image` default behavior. No shimmer placeholder — image appears when loaded. `sizes` prop set for responsive optimization. | Browser-native |
 | Detail page 404 | `notFound()` called when GROQ returns null for slug. Next.js default 404 page — no custom design in this phase. | Instant |
+| WhatsApp CTA click | Opens `https://wa.me/{whatsappNumber}?text={encodedMessage}` in new tab (`target="_blank" rel="noopener noreferrer"`). | Immediate |
 
 ---
 
@@ -248,9 +253,7 @@ Source: REQUIREMENTS.md EQUIP-01 through EQUIP-04 + RESEARCH.md Pattern 5 WhatsA
 |----------|-------------|-------------|
 | shadcn official (@shadcn) | button (installed), sheet (installed), input (to install), badge (to install) | Not required — official registry |
 
-No third-party registries. `components.json` `"registries": {}` is empty. Registry safety gate: not applicable.
-
-Source: `components.json` confirmed — no third-party registries declared.
+No third-party registries declared. `components.json` `"registries": {}` is empty — confirmed by codebase audit 2026-03-17. Registry safety gate: not applicable.
 
 ---
 
@@ -258,11 +261,12 @@ Source: `components.json` confirmed — no third-party registries declared.
 
 | State | Trigger | Visual Treatment |
 |-------|---------|-----------------|
-| No images | `equipo.imagenes` is empty or null | `bg-brand-surface` rectangle at aspect-ratio 4/3 with lucide `Package` icon centered at 48px, `text-brand-text/30` |
-| Empty search | 0 results after filter+search | Centered empty state block below filter bar — icon + heading + body copy |
-| Loading (list) | Server fetch — page renders with data hydrated; no client loading state needed | Not applicable (server component fetches before render) |
-| notFound (detail) | GROQ returns null for slug | Next.js native `notFound()` — default 404, no custom design this phase |
-| Sanity not configured | `NEXT_PUBLIC_SANITY_PROJECT_ID` = 'placeholder' | GROQ returns empty array; empty state is shown (same as 0 results) |
+| No images | `equipo.imagenes` is empty or null | `bg-brand-surface` rectangle at `aspect-ratio 4/3` with lucide `Package` icon centered at 48px, `text-brand-text/30` |
+| Empty search | 0 results after filter+search | Centered empty state block below filter bar — lucide `Search` icon + heading + body copy, `animate-in fade-in-0` |
+| No data (Sanity not configured) | `NEXT_PUBLIC_SANITY_PROJECT_ID` = 'placeholder' causes GROQ to return empty array | Same empty state as 0 results — treated identically |
+| Loading (list) | Server component fetches before render; no client-side loading state needed | Not applicable |
+| 404 (detail) | GROQ returns null for slug | `notFound()` — Next.js native 404 page, no custom design this phase |
+| Fetch error (detail) | `client.fetch` throws | `notFound()` — same as null response |
 
 ---
 
