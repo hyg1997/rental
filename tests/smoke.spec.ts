@@ -38,12 +38,9 @@ test.describe('Phase 1 Smoke Tests', () => {
     // UX-03: Hamburger menu on mobile
     await page.setViewportSize({ width: 360, height: 640 })
     await page.goto('/')
-    // Will be implemented in Plan 01-03 — stub checks for hamburger button
-    const menuButton = page.locator('button[aria-label="Abrir menú"]')
-    // This test will fail until Plan 01-03 adds the Navbar
-    // Uncomment after Plan 01-03:
-    // await expect(menuButton).toBeVisible()
-    // await menuButton.click()
-    // await expect(page.locator('[data-state="open"]')).toBeVisible()
+    const menuButton = page.locator('button[aria-label="Abrir menu"]')
+    await expect(menuButton).toBeVisible()
+    await menuButton.click()
+    await expect(page.locator('[data-state="open"]')).toBeVisible()
   })
 })
