@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
-export const siteSettings = defineType({
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const siteSettingsBase = defineType({
   name: 'siteSettings',
   title: 'Configuración del Sitio',
   type: 'document',
@@ -24,6 +25,10 @@ export const siteSettings = defineType({
     }),
     defineField({ name: 'footerText', title: 'Texto Footer', type: 'string' }),
   ],
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  ...(({ __experimental_actions: ['update', 'publish'] }) as any),
+})
+
+// Singleton: disable create/delete actions in Studio
+// __experimental_actions is not in Sanity v3 types but is widely supported at runtime
+export const siteSettings = Object.assign(siteSettingsBase, {
+  __experimental_actions: ['update', 'publish'],
 })
