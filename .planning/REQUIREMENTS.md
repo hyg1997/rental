@@ -16,10 +16,10 @@
 
 ### Catálogo de Equipos
 
-- [ ] **EQUIP-01**: Usuario puede ver listado de equipos filtrable por tipo (calibración/venta) y categoría
-- [ ] **EQUIP-02**: Usuario puede buscar equipos por nombre o marca
-- [ ] **EQUIP-03**: Usuario puede ver ficha detalle de equipo con especificaciones, imágenes y estado
-- [ ] **EQUIP-04**: Usuario puede solicitar cotización desde la ficha de equipo (abre formulario o WhatsApp con datos del equipo)
+- [x] **EQUIP-01**: Usuario puede ver listado de equipos filtrable por tipo (calibración/venta) y categoría
+- [x] **EQUIP-02**: Usuario puede buscar equipos por nombre o marca
+- [x] **EQUIP-03**: Usuario puede ver ficha detalle de equipo con especificaciones, imágenes y estado
+- [x] **EQUIP-04**: Usuario puede solicitar cotización desde la ficha de equipo (abre formulario o WhatsApp con datos del equipo)
 
 ### Contacto y Cotización
 
@@ -100,10 +100,10 @@
 | UX-01 | Phase 1 | Complete |
 | UX-02 | Phase 1 | Complete |
 | UX-03 | Phase 1 | Complete |
-| EQUIP-01 | Phase 2 | Pending |
-| EQUIP-02 | Phase 2 | Pending |
-| EQUIP-03 | Phase 2 | Pending |
-| EQUIP-04 | Phase 2 | Pending |
+| EQUIP-01 | Phase 2 | Complete |
+| EQUIP-02 | Phase 2 | Complete |
+| EQUIP-03 | Phase 2 | Complete |
+| EQUIP-04 | Phase 2 | Complete |
 | HOME-01 | Phase 3 | Pending |
 | HOME-02 | Phase 3 | Pending |
 | HOME-03 | Phase 3 | Pending |
