@@ -1,7 +1,19 @@
+import type { Metadata } from 'next'
 import { Mail, Phone, MapPin } from 'lucide-react'
 import { client } from '@/sanity/client'
 import { SITE_SETTINGS_QUERY } from '@/sanity/queries/site-settings'
 import { ContactForm } from '@/components/forms/contact-form'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Contacto',
+    description: 'Contacta a Testing Calibrations S.A.C. para cotizaciones de calibracion y venta de equipos de medicion. Telefono, email, WhatsApp y ubicacion.',
+    openGraph: {
+      title: 'Contacto | Testing Calibrations S.A.C.',
+      description: 'Contacta a Testing Calibrations S.A.C. para cotizaciones de calibracion y venta de equipos.',
+    },
+  }
+}
 
 export default async function ContactoPage() {
   const settings = await client.fetch(SITE_SETTINGS_QUERY).catch(() => null)

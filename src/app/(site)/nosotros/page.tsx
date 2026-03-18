@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import { client } from '@/sanity/client'
 import { NOSOTROS_CONTENT_QUERY } from '@/sanity/queries/homepage'
 import { CheckCircle, Shield, Users, type LucideIcon } from 'lucide-react'
@@ -6,6 +7,17 @@ const iconMap: Record<string, LucideIcon> = {
   'check-circle': CheckCircle,
   shield: Shield,
   users: Users,
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Nosotros',
+    description: 'Conoce la historia, mision, vision y valores de Testing Calibrations S.A.C., empresa especializada en calibracion de equipos de medicion.',
+    openGraph: {
+      title: 'Nosotros | Testing Calibrations S.A.C.',
+      description: 'Conoce la historia, mision, vision y valores de Testing Calibrations S.A.C.',
+    },
+  }
 }
 
 export default async function NosotrosPage() {

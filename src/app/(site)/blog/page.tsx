@@ -1,6 +1,18 @@
+import type { Metadata } from 'next'
 import { client } from '@/sanity/client'
 import { POSTS_LIST_QUERY } from '@/sanity/queries/posts'
 import { PostCard } from '@/components/blog/post-card'
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: 'Blog',
+    description: 'Articulos sobre calibracion, metrologia y equipos de medicion por Testing Calibrations S.A.C.',
+    openGraph: {
+      title: 'Blog | Testing Calibrations S.A.C.',
+      description: 'Articulos sobre calibracion, metrologia y equipos de medicion.',
+    },
+  }
+}
 
 export default async function BlogPage() {
   const posts = await client.fetch(POSTS_LIST_QUERY).catch(() => [])
