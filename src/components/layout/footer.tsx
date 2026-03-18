@@ -26,13 +26,13 @@ export function Footer({
         <div>
           <h3 className="text-brand-text font-bold text-lg mb-4">Contacto</h3>
           {email && (
-            <p className="text-brand-text/60 text-sm mb-2">{email}</p>
+            <p className="text-brand-text/60 text-sm mb-2">Email: {email}</p>
           )}
           {address && (
-            <p className="text-brand-text/60 text-sm mb-2">{address}</p>
+            <p className="text-brand-text/60 text-sm mb-2">Direccion: {address}</p>
           )}
           {whatsappNumber && (
-            <p className="text-brand-text/60 text-sm mb-2">{whatsappNumber}</p>
+            <p className="text-brand-text/60 text-sm mb-2">WhatsApp: {whatsappNumber}</p>
           )}
         </div>
 
@@ -50,6 +50,14 @@ export function Footer({
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/libro-de-reclamaciones"
+                className="text-brand-text/60 hover:text-brand-red text-sm transition-colors"
+              >
+                Libro de Reclamaciones
+              </Link>
+            </li>
           </ul>
         </div>
 
