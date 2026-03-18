@@ -49,14 +49,23 @@ function Counter({ target, label, suffix = '' }: CounterProps) {
   )
 }
 
-export function MetricsSection() {
+interface Metrica {
+  valor: number
+  sufijo?: string
+  etiqueta: string
+}
+
+interface MetricsSectionProps {
+  metricas?: Metrica[]
+}
+
+export function MetricsSection({ metricas = [] }: MetricsSectionProps) {
   return (
     <section className="py-16 px-4 bg-brand-surface">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-        <Counter target={200} suffix="+" label="Clientes atendidos" />
-        <Counter target={500} suffix="+" label="Equipos calibrados" />
-        <Counter target={10} suffix="+" label="Anos de experiencia" />
-        <Counter target={15} suffix="+" label="Tipos de equipos" />
+        {metricas.map((m, i) => (
+          <Counter key={i} target={m.valor} suffix={m.sufijo ?? ''} label={m.etiqueta} />
+        ))}
       </div>
     </section>
   )
