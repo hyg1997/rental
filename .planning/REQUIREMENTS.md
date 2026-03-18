@@ -54,9 +54,9 @@
 
 ### SEO
 
-- [ ] **SEO-01**: Cada página tiene meta tags (title, description) administrables desde Sanity
-- [ ] **SEO-02**: Open Graph tags para compartir en redes sociales
-- [ ] **SEO-03**: Sitemap XML generado automáticamente
+- [x] **SEO-01**: Cada página tiene meta tags (title, description) administrables desde Sanity
+- [x] **SEO-02**: Open Graph tags para compartir en redes sociales
+- [x] **SEO-03**: Sitemap XML generado automáticamente
 
 ## v2 Requirements
 
@@ -120,9 +120,9 @@
 | BLOG-01 | Phase 3 | Complete |
 | BLOG-02 | Phase 3 | Complete |
 | BLOG-03 | Phase 3 | Complete |
-| SEO-01 | Phase 4 | Pending |
-| SEO-02 | Phase 4 | Pending |
-| SEO-03 | Phase 4 | Pending |
+| SEO-01 | Phase 4 | Complete |
+| SEO-02 | Phase 4 | Complete |
+| SEO-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 29 total

@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-03-18T06:30:55.744Z"
+stopped_at: Completed 04-01-PLAN.md
+last_updated: "2026-03-18T07:42:53.155Z"
 last_activity: 2026-03-18 — All Phase 03 plans executed (homepage, nosotros, contact, blog)
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 14
-  completed_plans: 14
+  total_plans: 17
+  completed_plans: 15
   percent: 81
 ---
 
@@ -58,6 +58,7 @@ Progress: [████████░░] 81%
 | Phase 05-cms P01 | 2 | 2 tasks | 4 files |
 | Phase 05-cms PP03 | 8 | 2 tasks | 3 files |
 | Phase 05-cms PP02 | 8 | 2 tasks | 5 files |
+| Phase 04-seo-and-launch P01 | 8 | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -90,6 +91,9 @@ Recent decisions affecting current work:
 - [Phase 05-03]: nosotros page uses .catch(() => null) pattern with inline fallback strings — page renders identically when Sanity returns null
 - [Phase 05-02]: Icon map pattern uses Record<string, LucideIcon> with fallback — prevents render crash on unknown icon values from Sanity
 - [Phase 05-02]: Silent empty state hides grid div entirely when array is empty — section heading remains visible per UI-SPEC
+- [Phase 04-seo-and-launch]: sitemap.ts uses .catch(() => []) on each Sanity fetch so sitemap builds even if Sanity is unreachable at build time
+- [Phase 04-seo-and-launch]: SEO fields use field groups in Sanity Studio — editors see Contenido tab by default, SEO tab only when needed
+- [Phase 04-seo-and-launch]: metadataBase reads NEXT_PUBLIC_SITE_URL env var with testingcalibrations.com.pe as hardcoded fallback
 
 ### Roadmap Evolution
 
@@ -107,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-18T06:23:38.171Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-03-18T07:42:53.152Z
+Stopped at: Completed 04-01-PLAN.md
 Resume file: None
