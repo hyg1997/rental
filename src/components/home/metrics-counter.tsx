@@ -59,11 +59,20 @@ interface MetricsSectionProps {
   metricas?: Metrica[]
 }
 
+const defaultMetricas: Metrica[] = [
+  { valor: 500, sufijo: '+', etiqueta: 'Clientes Satisfechos' },
+  { valor: 10, sufijo: '+', etiqueta: 'Años de Experiencia' },
+  { valor: 1000, sufijo: '+', etiqueta: 'Equipos Calibrados' },
+  { valor: 50, sufijo: '+', etiqueta: 'Empresas Atendidas' },
+]
+
 export function MetricsSection({ metricas = [] }: MetricsSectionProps) {
+  const data = metricas.length > 0 ? metricas : defaultMetricas
+
   return (
     <section className="py-16 px-4 bg-brand-surface">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-        {metricas.map((m, i) => (
+        {data.map((m, i) => (
           <Counter key={i} target={m.valor} suffix={m.sufijo ?? ''} label={m.etiqueta} />
         ))}
       </div>

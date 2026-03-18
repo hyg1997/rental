@@ -105,7 +105,7 @@ test.describe('Blog (BLOG)', () => {
       await expect(page.getByRole('heading').first()).toBeVisible()
       await expect(page.locator('a[href="/blog"]')).toBeVisible() // back link
     } else {
-      await expect(page.getByText(/pronto/i)).toBeVisible()
+      await expect(page.getByRole('heading', { name: /pronto/i })).toBeVisible()
     }
   })
 
