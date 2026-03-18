@@ -7,7 +7,7 @@ export default async function EquiposPage() {
 
   return (
     <section className="px-4 py-12 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold text-brand-text mb-8">Catalogo de Equipos</h1>
+      <h1 className="text-3xl font-bold text-brand-text mb-8">Catálogo de Equipos</h1>
       <EquipmentGrid equipos={equipos} />
     </section>
   )
