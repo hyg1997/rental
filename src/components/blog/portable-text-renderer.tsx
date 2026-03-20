@@ -22,7 +22,7 @@ const components = {
 
 export function PortableTextRenderer({ value }: { value: PortableTextBlock[] }) {
   return (
-    <div className="prose prose-invert max-w-none text-brand-text leading-relaxed">
+    <div className="prose max-w-none text-tc-text leading-relaxed">
       <PortableText value={value} components={components} />
     </div>
   )

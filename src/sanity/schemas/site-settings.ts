@@ -36,7 +36,7 @@ const siteSettingsBase = defineType({
       title: 'Servicios',
       type: 'array',
       group: 'homepage',
-      description: 'Tarjetas de la seccion "Nuestros Servicios" en la pagina de inicio.',
+      description: 'Tarjetas de la seccion "Nuestra Especializacion Tecnica" en la pagina de inicio.',
       of: [
         defineArrayMember({
           type: 'object',
@@ -61,11 +61,82 @@ const siteSettingsBase = defineType({
               description: 'Icono representativo del servicio.',
               options: {
                 list: [
+                  { title: 'Matraz / Laboratorio', value: 'flask' },
+                  { title: 'Tacometro / Velocidad', value: 'gauge' },
+                  { title: 'Microscopio', value: 'microscope' },
                   { title: 'Llave inglesa', value: 'wrench' },
                   { title: 'Check (verificacion)', value: 'check-circle' },
                   { title: 'Escudo', value: 'shield' },
                   { title: 'Engranaje', value: 'settings' },
                   { title: 'Rayo', value: 'zap' },
+                ],
+              },
+            }),
+            defineField({
+              name: 'items',
+              title: 'Lista de Items',
+              type: 'array',
+              description: 'Equipos o servicios especificos dentro de esta categoria.',
+              of: [
+                defineArrayMember({
+                  type: 'string',
+                }),
+              ],
+            }),
+          ],
+        }),
+      ],
+    }),
+
+    defineField({
+      name: 'aboutImage',
+      title: 'Imagen de la Seccion "Sobre Nosotros"',
+      type: 'image',
+      group: 'homepage',
+      options: { hotspot: true },
+      description: 'Imagen que aparece en la seccion Sobre Nosotros del homepage. Recomendado: 1200x800px.',
+    }),
+    defineField({
+      name: 'aboutExperienceYears',
+      title: 'Años de Experiencia',
+      type: 'number',
+      group: 'homepage',
+      description: 'Numero que aparece en la insignia de experiencia (ej: 15).',
+    }),
+
+    defineField({
+      name: 'proceso',
+      title: 'Proceso de Mejora Continua',
+      type: 'array',
+      group: 'homepage',
+      description: 'Pasos del proceso tecnico mostrados en la linea de tiempo horizontal.',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          title: 'Paso',
+          fields: [
+            defineField({
+              name: 'titulo',
+              title: 'Titulo del Paso',
+              type: 'string',
+              validation: (r) => r.required(),
+            }),
+            defineField({
+              name: 'descripcion',
+              title: 'Descripcion Corta',
+              type: 'string',
+            }),
+            defineField({
+              name: 'icono',
+              title: 'Icono',
+              type: 'string',
+              options: {
+                list: [
+                  { title: 'Editar / Recepcion', value: 'pencil' },
+                  { title: 'Lista / Evaluacion', value: 'clipboard-list' },
+                  { title: 'Tubo / Investigacion', value: 'test-tube' },
+                  { title: 'Sincronizar / Accion', value: 'refresh-cw' },
+                  { title: 'Check / Cierre', value: 'check-circle' },
                 ],
               },
             }),
@@ -103,11 +174,16 @@ const siteSettingsBase = defineType({
               type: 'string',
               options: {
                 list: [
+                  { title: 'Balanza / Imparcialidad', value: 'scale' },
+                  { title: 'Escudo / Integridad', value: 'shield' },
+                  { title: 'Estrella / Calidad', value: 'star' },
+                  { title: 'Graduacion / Competencia', value: 'graduation-cap' },
+                  { title: 'Corazon / Compromiso', value: 'heart-handshake' },
+                  { title: 'Tendencia / Mejora', value: 'trending-up' },
                   { title: 'Premio / Trofeo', value: 'award' },
-                  { title: 'Reloj', value: 'clock' },
+                  { title: 'Check / Verificacion', value: 'check-circle' },
                   { title: 'Personas / Equipo', value: 'users' },
-                  { title: 'Escudo', value: 'shield' },
-                  { title: 'Check', value: 'check-circle' },
+                  { title: 'Reloj', value: 'clock' },
                 ],
               },
             }),

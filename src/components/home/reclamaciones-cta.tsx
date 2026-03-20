@@ -2,14 +2,15 @@ import Link from 'next/link'
 
 export function ReclamacionesCta() {
   return (
-    <section className="py-12 px-4 bg-brand-bg">
-      <div className="max-w-6xl mx-auto text-center">
-        <p className="text-brand-text/70 mb-4">
-          De acuerdo con la normativa vigente, ponemos a tu disposicion nuestro Libro de Reclamaciones virtual.
+    <section className="py-16 px-[8%] bg-tc-surface">
+      <div className="max-w-4xl mx-auto text-center">
+        <p className="text-tc-text-light mb-6 text-lg">
+          De acuerdo con la normativa vigente, ponemos a tu disposición nuestro Libro de
+          Reclamaciones virtual.
         </p>
         <Link
           href="/libro-de-reclamaciones"
-          className="bg-brand-red text-white font-semibold px-6 py-3 rounded-md inline-block hover:bg-brand-red/90 transition-colors"
+          className="bg-tc-accent text-white font-extrabold px-8 py-4 rounded-full inline-block hover:bg-tc-accent-dark hover:scale-105 transition-all shadow-[0_10px_20px_rgba(230,126,34,0.2)]"
         >
           Libro de Reclamaciones
         </Link>

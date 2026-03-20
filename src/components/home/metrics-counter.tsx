@@ -40,11 +40,11 @@ function Counter({ target, label, suffix = '' }: CounterProps) {
 
   return (
     <div ref={ref} className="text-center">
-      <p className="text-5xl font-bold text-brand-yellow">
+      <p className="text-5xl lg:text-6xl font-extrabold text-white leading-none">
         {count}
         {suffix}
       </p>
-      <p className="mt-2 text-sm text-brand-text/70">{label}</p>
+      <p className="mt-3 text-sm text-white/70 font-medium">{label}</p>
     </div>
   )
 }
@@ -61,7 +61,7 @@ interface MetricsSectionProps {
 
 const defaultMetricas: Metrica[] = [
   { valor: 500, sufijo: '+', etiqueta: 'Clientes Satisfechos' },
-  { valor: 10, sufijo: '+', etiqueta: 'Años de Experiencia' },
+  { valor: 15, sufijo: '+', etiqueta: 'Años de Experiencia' },
   { valor: 1000, sufijo: '+', etiqueta: 'Equipos Calibrados' },
   { valor: 50, sufijo: '+', etiqueta: 'Empresas Atendidas' },
 ]
@@ -70,8 +70,8 @@ export function MetricsSection({ metricas = [] }: MetricsSectionProps) {
   const data = metricas.length > 0 ? metricas : defaultMetricas
 
   return (
-    <section className="py-16 px-4 bg-brand-surface">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+    <section className="py-20 lg:py-24 px-[8%] gradient-blue">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-5xl mx-auto">
         {data.map((m, i) => (
           <Counter key={i} target={m.valor} suffix={m.sufijo ?? ''} label={m.etiqueta} />
         ))}

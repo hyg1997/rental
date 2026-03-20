@@ -25,44 +25,44 @@ export function EquipmentCard({
   imagenPrincipal,
 }: EquipmentCardProps) {
   return (
-    <article className="rounded-lg overflow-hidden hover:shadow-md hover:scale-[1.01] transition-transform duration-150">
+    <article className="bg-white rounded-[20px] overflow-hidden border border-tc-border hover:-translate-y-2 hover:border-tc-accent hover:shadow-premium transition-all duration-500">
       {imagenPrincipal ? (
         <Image
           src={urlFor(imagenPrincipal).width(600).height(450).quality(80).auto('format').url()}
           alt={nombre}
           width={600}
           height={450}
-          className="object-cover w-full aspect-[4/3] rounded-t-lg"
+          className="object-cover w-full aspect-[4/3]"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       ) : (
-        <div className="w-full aspect-[4/3] rounded-t-lg bg-brand-surface flex items-center justify-center">
-          <Package size={48} className="text-brand-text/30" />
+        <div className="w-full aspect-[4/3] bg-tc-surface flex items-center justify-center">
+          <Package size={48} className="text-tc-text-light/30" />
         </div>
       )}
 
-      <div className="bg-brand-surface rounded-b-lg p-4">
-        <h3 className="text-xl font-bold text-brand-text line-clamp-2">{nombre}</h3>
+      <div className="p-6">
+        <h3 className="text-lg font-bold text-tc-primary line-clamp-2">{nombre}</h3>
 
         {marca && (
-          <p className="text-sm text-brand-text/60 mt-1">
+          <p className="text-sm text-tc-text-light mt-1">
             {marca}{modelo ? ` ${modelo}` : ''}
           </p>
         )}
 
         {estado === 'disponible' && (
-          <Badge className="bg-green-600 text-white mt-2">Disponible</Badge>
+          <Badge className="bg-green-500 text-white mt-3">Disponible</Badge>
         )}
         {estado === 'no_disponible' && (
-          <Badge className="bg-brand-text/20 text-brand-text/60 mt-2">No disponible</Badge>
+          <Badge className="bg-tc-text-light/20 text-tc-text-light mt-3">No disponible</Badge>
         )}
         {estado === 'en_mantenimiento' && (
-          <Badge className="bg-amber-600 text-white mt-2">En mantenimiento</Badge>
+          <Badge className="bg-amber-500 text-white mt-3">En mantenimiento</Badge>
         )}
 
         <Link
           href={'/equipos/' + slug}
-          className="text-sm text-brand-red hover:text-brand-yellow mt-3 inline-block"
+          className="text-sm text-tc-accent hover:text-tc-accent-dark font-bold mt-4 inline-block transition-colors"
         >
           Ver detalles &rarr;
         </Link>

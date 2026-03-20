@@ -41,8 +41,8 @@ export function EquipmentGrid({ equipos }: EquipmentGridProps) {
 
   const filterBtnClass = (active: boolean) =>
     active
-      ? 'min-h-[44px] px-4 py-2 rounded-md font-semibold bg-brand-red text-white'
-      : 'min-h-[44px] px-4 py-2 rounded-md font-semibold bg-brand-surface text-brand-text hover:text-brand-red transition-colors'
+      ? 'min-h-[44px] px-4 py-2 rounded-md font-semibold bg-tc-accent text-white'
+      : 'min-h-[44px] px-4 py-2 rounded-md font-semibold bg-tc-surface text-tc-text hover:text-tc-accent transition-colors'
 
   return (
     <div>
@@ -72,7 +72,7 @@ export function EquipmentGrid({ equipos }: EquipmentGridProps) {
       <div className="relative max-w-sm mt-4">
         <Search
           size={16}
-          className="absolute left-3 top-1/2 -translate-y-1/2 text-brand-text/60"
+          className="absolute left-3 top-1/2 -translate-y-1/2 text-tc-text/60"
         />
         <Input
           placeholder="Buscar por nombre o marca..."
@@ -100,9 +100,9 @@ export function EquipmentGrid({ equipos }: EquipmentGridProps) {
         </div>
       ) : (
         <div className="text-center py-16 animate-in fade-in-0">
-          <Search className="mx-auto text-brand-text/30 mb-4" size={48} />
-          <h3 className="text-xl font-bold text-brand-text">No se encontraron equipos</h3>
-          <p className="text-brand-text/60 mt-2">
+          <Search className="mx-auto text-tc-text/30 mb-4" size={48} />
+          <h3 className="text-xl font-bold text-tc-text">No se encontraron equipos</h3>
+          <p className="text-tc-text/60 mt-2">
             Intenta con otro termino de busqueda o selecciona una categoria diferente.
           </p>
         </div>

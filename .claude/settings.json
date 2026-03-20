@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node \"/Users/hugoyupanqui/.claude/get-shit-done/bin/gsd-tools.cjs\" state record-session --stopped-at \"Completed 04-03-PLAN.md\")",
+      "Bash(node \"/Users/hugoyupanqui/.claude/get-shit-done/bin/gsd-tools.cjs\" requirements mark-complete SEO-01 SEO-02 SEO-03)",
+      "Bash(cat /Users/hugoyupanqui/rental/.planning/phases/04-seo-and-launch/*-VERIFICATION.md)",
+      "Bash(grep -E SEO-0[123] /Users/hugoyupanqui/rental/.planning/REQUIREMENTS.md)",
+      "Bash(grep -n name.*''seo'' /Users/hugoyupanqui/rental/src/sanity/schemas/post.ts)",
+      "Bash(grep -n name.*''seo'' /Users/hugoyupanqui/rental/src/sanity/schemas/equipo.ts)",
+      "Read(//dev/**)",
+      "Bash(node \"/Users/hugoyupanqui/.claude/get-shit-done/bin/gsd-tools.cjs\" commit \"docs\\(phase-04\\): complete phase execution\" --files .planning/ROADMAP.md .planning/STATE.md .planning/phases/04-seo-and-launch/04-VERIFICATION.md)",
+      "Bash(git remote:*)",
+      "Bash(git push:*)"
+    ],
+    "additionalDirectories": [
+      "/Users/hugoyupanqui/rental/.planning/phases"
+    ]
+  }
+}

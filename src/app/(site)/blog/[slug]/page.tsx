@@ -57,10 +57,10 @@ export default async function BlogDetailPage({
   if (!post) notFound()
 
   return (
-    <section className="max-w-3xl mx-auto px-4 py-12">
-      <div className="flex items-center gap-4 text-sm text-brand-text/60 mb-4">
+    <section className="max-w-3xl mx-auto px-[8%] pt-32 pb-16">
+      <div className="flex items-center gap-4 text-sm text-tc-text/60 mb-4">
         {post.categoria && (
-          <Badge className="bg-brand-red/20 text-brand-red text-xs">{post.categoria}</Badge>
+          <Badge className="bg-tc-accent/20 text-tc-accent text-xs">{post.categoria}</Badge>
         )}
         {post.fechaPublicacion && (
           <span>
@@ -74,7 +74,7 @@ export default async function BlogDetailPage({
         {post.autor && <span>{post.autor}</span>}
       </div>
 
-      <h1 className="text-3xl font-bold text-brand-text mb-8">{post.titulo}</h1>
+      <h1 className="text-3xl font-bold text-tc-text mb-8">{post.titulo}</h1>
 
       {post.imagen && (
         <Image
@@ -96,7 +96,7 @@ export default async function BlogDetailPage({
 
       <Link
         href="/blog"
-        className="text-sm text-brand-red hover:text-brand-yellow mt-8 inline-block"
+        className="text-sm text-tc-accent hover:text-tc-accent-dark mt-8 inline-block"
       >
         &larr; Volver al blog
       </Link>

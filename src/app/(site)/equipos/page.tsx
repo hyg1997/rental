@@ -5,11 +5,11 @@ import { EquipmentGrid } from '@/components/equipos/equipment-grid'
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: 'Catalogo de Equipos',
-    description: 'Explora nuestro catalogo de equipos de medicion para calibracion y venta. Testing Calibrations S.A.C.',
+    title: 'Catálogo de Equipos',
+    description: 'Explora nuestro catálogo de equipos de medición para calibración y venta. Testing Calibrations S.A.C.',
     openGraph: {
-      title: 'Catalogo de Equipos | Testing Calibrations S.A.C.',
-      description: 'Explora nuestro catalogo de equipos de medicion para calibracion y venta.',
+      title: 'Catálogo de Equipos | Testing Calibrations S.A.C.',
+      description: 'Explora nuestro catálogo de equipos de medición para calibración y venta.',
     },
   }
 }
@@ -18,9 +18,23 @@ export default async function EquiposPage() {
   const equipos = await client.fetch(EQUIPOS_LIST_QUERY).catch(() => [])
 
   return (
-    <section className="px-4 py-12 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold text-brand-text mb-8">Catálogo de Equipos</h1>
-      <EquipmentGrid equipos={equipos} />
-    </section>
+    <div className="pt-28">
+      <section className="gradient-blue py-16 px-[8%] text-white">
+        <div className="max-w-4xl mx-auto">
+          <span className="text-tc-accent font-extrabold tracking-[2px] text-sm uppercase">
+            NUESTROS EQUIPOS
+          </span>
+          <h1 className="font-[Outfit,sans-serif] text-4xl lg:text-5xl font-extrabold mt-4">
+            Catálogo de Equipos
+          </h1>
+        </div>
+      </section>
+
+      <section className="py-16 px-[8%] bg-white">
+        <div className="max-w-7xl mx-auto">
+          <EquipmentGrid equipos={equipos} />
+        </div>
+      </section>
+    </div>
   )
 }

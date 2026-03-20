@@ -64,14 +64,14 @@ export default async function EquipoDetailPage({
   const whatsappHref = `https://wa.me/${whatsappNumber}?text=${message}`
 
   return (
-    <section className="max-w-5xl mx-auto px-4 py-12">
+    <section className="max-w-5xl mx-auto px-[8%] pt-32 pb-16">
       {/* Breadcrumb */}
-      <nav className="text-sm text-brand-text/60 mb-6">
-        <Link href="/equipos" className="hover:text-brand-red">
-          Catalogo
+      <nav className="text-sm text-tc-text-light mb-6">
+        <Link href="/equipos" className="hover:text-tc-accent transition-colors">
+          Catálogo
         </Link>
         {' / '}
-        <span className="text-brand-text font-medium">{equipo.nombre}</span>
+        <span className="text-tc-text font-medium">{equipo.nombre}</span>
       </nav>
 
       {/* Two-column hero */}
@@ -88,18 +88,18 @@ export default async function EquipoDetailPage({
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
           ) : (
-            <div className="w-full aspect-[4/3] rounded-lg bg-brand-surface flex items-center justify-center">
-              <Package size={64} className="text-brand-text/30" />
+            <div className="w-full aspect-[4/3] rounded-lg bg-tc-surface flex items-center justify-center">
+              <Package size={64} className="text-tc-text/30" />
             </div>
           )}
         </div>
 
         {/* Right column — Info */}
         <div>
-          <h1 className="text-3xl font-bold text-brand-text">{equipo.nombre}</h1>
+          <h1 className="font-[Outfit,sans-serif] text-3xl font-extrabold text-tc-primary">{equipo.nombre}</h1>
 
           {equipo.marca && (
-            <p className="text-sm text-brand-text/60 mt-1">
+            <p className="text-sm text-tc-text/60 mt-1">
               {equipo.marca}
               {equipo.modelo ? ` ${equipo.modelo}` : ''}
             </p>
@@ -107,7 +107,7 @@ export default async function EquipoDetailPage({
 
           <div className="flex gap-2 mt-3 flex-wrap">
             {equipo.tipo && (
-              <Badge className="bg-brand-surface text-brand-text">
+              <Badge className="bg-tc-surface text-tc-text">
                 {equipo.tipo === 'calibracion' ? 'Calibracion' : 'En Venta'}
               </Badge>
             )}
@@ -115,12 +115,12 @@ export default async function EquipoDetailPage({
               <Badge className="bg-green-600 text-white">Disponible</Badge>
             )}
             {equipo.estado === 'no_disponible' && (
-              <Badge className="bg-brand-text/20 text-brand-text/60">No disponible</Badge>
+              <Badge className="bg-tc-text/20 text-tc-text/60">No disponible</Badge>
             )}
           </div>
 
           {equipo.descripcion && (
-            <p className="text-base text-brand-text mt-4 leading-relaxed">
+            <p className="text-base text-tc-text mt-4 leading-relaxed">
               {equipo.descripcion}
             </p>
           )}
@@ -130,7 +130,7 @@ export default async function EquipoDetailPage({
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-brand-red hover:bg-brand-yellow text-white hover:text-black font-semibold py-3 px-6 rounded-md transition-colors duration-150 mt-6 w-full lg:w-auto justify-center"
+            className="inline-flex items-center gap-2 bg-tc-accent hover:bg-tc-accent-dark text-white font-extrabold py-4 px-8 rounded-full transition-all hover:scale-105 mt-6 w-full lg:w-auto justify-center shadow-[0_10px_20px_rgba(230,126,34,0.2)]"
           >
             <MessageCircle size={20} />
             Solicitar Cotizacion por WhatsApp
@@ -140,9 +140,9 @@ export default async function EquipoDetailPage({
 
       {/* Specifications section */}
       {equipo.especificaciones && (
-        <section className="mt-12 pt-8 border-t border-brand-text/10">
-          <h2 className="text-xl font-bold text-brand-text mb-4">Especificaciones</h2>
-          <div className="prose prose-invert max-w-none text-brand-text">
+        <section className="mt-12 pt-8 border-t border-tc-text/10">
+          <h2 className="text-xl font-bold text-tc-text mb-4">Especificaciones</h2>
+          <div className="prose max-w-none text-tc-text">
             <PortableText value={equipo.especificaciones} />
           </div>
         </section>

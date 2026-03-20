@@ -54,56 +54,56 @@ export function ReclamoForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-1">
-        <Label htmlFor="nombreConsumidor" className="text-sm text-brand-text">
+        <Label htmlFor="nombreConsumidor" className="text-sm text-tc-text">
           Nombre completo del consumidor
         </Label>
         <Input
           id="nombreConsumidor"
           name="nombreConsumidor"
           required
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="dniRuc" className="text-sm text-brand-text">
+        <Label htmlFor="dniRuc" className="text-sm text-tc-text">
           DNI / RUC
         </Label>
         <Input
           id="dniRuc"
           name="dniRuc"
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="emailConsumidor" className="text-sm text-brand-text">
+        <Label htmlFor="emailConsumidor" className="text-sm text-tc-text">
           Correo electronico
         </Label>
         <Input
           id="emailConsumidor"
           name="emailConsumidor"
           type="email"
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="telefonoConsumidor" className="text-sm text-brand-text">
+        <Label htmlFor="telefonoConsumidor" className="text-sm text-tc-text">
           Telefono
         </Label>
         <Input
           id="telefonoConsumidor"
           name="telefonoConsumidor"
           type="tel"
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label className="text-sm text-brand-text">Tipo</Label>
+        <Label className="text-sm text-tc-text">Tipo</Label>
         <Select value={tipoReclamo} onValueChange={(val) => setTipoReclamo(val ?? '')} required>
-          <SelectTrigger className="bg-brand-surface border-brand-text/20">
+          <SelectTrigger className="bg-tc-surface border-tc-text/20">
             <SelectValue placeholder="Selecciona el tipo" />
           </SelectTrigger>
           <SelectContent>
@@ -118,19 +118,19 @@ export function ReclamoForm() {
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="bienServicio" className="text-sm text-brand-text">
+        <Label htmlFor="bienServicio" className="text-sm text-tc-text">
           Bien o servicio reclamado
         </Label>
         <Textarea
           id="bienServicio"
           name="bienServicio"
           rows={2}
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="detalle" className="text-sm text-brand-text">
+        <Label htmlFor="detalle" className="text-sm text-tc-text">
           Detalle del reclamo o queja
         </Label>
         <Textarea
@@ -138,19 +138,19 @@ export function ReclamoForm() {
           name="detalle"
           rows={4}
           required
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
       <div className="space-y-1">
-        <Label htmlFor="pedido" className="text-sm text-brand-text">
+        <Label htmlFor="pedido" className="text-sm text-tc-text">
           Pedido del consumidor
         </Label>
         <Textarea
           id="pedido"
           name="pedido"
           rows={2}
-          className="bg-brand-surface border-brand-text/20"
+          className="bg-tc-surface border-tc-text/20"
         />
       </div>
 
